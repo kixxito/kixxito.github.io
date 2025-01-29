@@ -1,1 +1,749 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
 
+h1 {
+  color: #000078;
+  text-align: center;
+  font-size: 1.688em;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+header div {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+header img {
+  position: relative;
+  height: 35px;
+}
+
+header button {
+  float: right;
+  cursor: pointer;
+}
+
+#registro {
+  width: 80px;
+  height: 35px;
+  background-color: #000078;
+  color: white;	
+  font-size: 0.65em;
+  border: 0px;
+}
+
+#sesion {
+  width: 80px;
+  height: 35px;
+  background-color: white;
+  color: #000078;	
+  font-size: 0.65em;
+  border: solid 1px;
+  margin-right: 5px;  
+}
+
+/* Tableta y escritorio */
+@media only screen and (min-width: 768px) {
+	#registro {
+	  width: 100px;
+	  height: 35px;
+	  font-size: 0.875em;
+	}
+
+	#sesion {
+	  width: 100px;
+	  height: 35px;
+	  font-size: 0.875em;
+	  margin-right: 10px;  
+	}
+}
+
+#formulario {
+  background-image: url("../img/imagenes/destacada.png");
+  background-position: center;
+  padding-top: 30px;
+  padding-bottom: 130px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+h1.intro {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #000078;
+  text-align: center;
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	h1.intro {
+	  font-size: 2.5em;
+	}
+}
+
+#formulario .contenedor {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  background-color: #000078;
+  max-width: 960px;
+}
+
+.contenedor-radio {
+  padding-bottom: 12px;
+  padding-left: 15px;
+  display: flex;
+}
+
+input[type=radio]{
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]+label{
+  width: 120px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 0.875em;
+  background: white;
+  cursor: pointer;
+}
+
+input[type=radio]:checked+label{
+    background: #73EDFF; 
+}
+
+.contenedor-resto {
+  padding-left: 15px;
+  padding-bottom: 12px;
+  display: grid;
+  grid-template-columns: 120px 120px;
+}
+
+#label_origen {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#text_origen {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#label_destino {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#text_destino {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#label_ida {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#date_ida {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+	
+#label_vuelta {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#date_vuelta {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+	
+#label_pasajero {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#select_pasajero {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+	
+.boton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+#formulario button {
+  height: 50px;
+  width: 105px;
+  background: #73EDFF;
+  border: 0px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	.contenedor-resto {
+	  padding-left: 15px;
+	  padding-bottom: 12px;
+	  display: grid;
+	  grid-template-columns: 110px 110px 110px 110px 110px auto;
+	}
+
+	#label_origen {
+	  grid-column-start: 1;
+	  grid-column-end: 2;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	}
+
+	#text_origen {
+	  grid-column-start: 1;
+	  grid-column-end: 2;
+	  grid-row-start: 2;
+	  grid-row-end: 3;
+	}
+
+	#label_destino {
+	  grid-column-start: 2;
+	  grid-column-end: 3;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	}
+
+	#text_destino {
+	  grid-column-start: 2;
+	  grid-column-end: 3;
+	  grid-row-start: 2;
+	  grid-row-end: 3;
+	}
+
+	#label_ida {
+	  grid-column-start: 3;
+	  grid-column-end: 4;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	}
+
+	#date_ida {
+	  grid-column-start: 3;
+	  grid-column-end: 4;
+	  grid-row-start: 2;
+	  grid-row-end: 3;
+	}
+	
+	#label_vuelta {
+	  grid-column-start: 4;
+	  grid-column-end: 5;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	}
+
+	#date_vuelta {
+	  grid-column-start: 4;
+	  grid-column-end: 5;
+	  grid-row-start: 2;
+	  grid-row-end: 3;
+	}
+	
+	#label_pasajero {
+	  grid-column-start: 5;
+	  grid-column-end: 6;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	}
+
+	#select_pasajero {
+	  grid-column-start: 5;
+	  grid-column-end: 6;
+	  grid-row-start: 2;
+	  grid-row-end: 3;
+	}
+	
+	.boton {
+	  grid-column-start: 6;
+	  grid-column-end: 7;
+	  grid-row-start: 1;
+	  grid-row-end: 3;
+	  margin-top: 0px;
+      margin-left: 0px;
+	}
+	
+	#formulario button {
+	  height: 80px;
+	  width: 130px;
+	  font-size: 1.313em;
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	.contenedor-resto {
+	  grid-template-columns: 160px 160px 160px 160px 160px auto;
+	}
+}
+
+.contenedor-resto label {	
+  color: gray;
+  padding-top: 10px;
+  padding-left: 10px;
+  background: white;
+  font-size: 0.875em;
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	.contenedor-resto label {
+	  margin-right: 1px;
+	}
+}
+
+::-webkit-input-placeholder { 
+  color: #a9a9a9;
+  font-weight: normal;
+}
+
+::-moz-placeholder { 
+  color: #a9a9a9;
+  font-weight: normal;  
+}
+ 
+:-ms-input-placeholder { 
+  color: #a9a9a9; 
+  font-weight: normal;
+}
+
+input:-moz-placeholder { 
+  color: #a9a9a9; 
+  font-weight: normal;
+}
+
+::placeholder {
+  color: #a9a9a9;
+  font-weight: normal;
+}
+
+input[type=text], input[type=date], select {
+  border: 0px;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	input[type=text], input[type=date], select {
+	  margin-right: 1px;
+	}
+}
+
+#label_ida, #date_ida {
+  margin-right: 0px;
+}
+
+::-webkit-calendar-picker-indicator {
+  color: rgba(0,0,0,0);
+  opacity: 1;
+  background: url("../img/imagenes/calendario.png") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	#label_pasajero, select {
+	  margin-right: 10px;
+	}
+}
+
+#inspirate {
+   padding-top: 40px;
+   padding-bottom: 10px;
+}
+
+#inspirate .contenedor {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 14.67px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;  
+}
+
+#inspirate img {
+  width: 229px;
+  height: 300px;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	#inspirate img {
+	  width: 160px;
+	  height: 210px;
+	}
+	
+	#inspirate .contenedor {
+	  display: grid;
+	  grid-template-columns: auto auto auto auto;
+	  grid-column-gap: 14.67px;
+	  padding-left: 30px;
+	  padding-right: 30px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  max-width: 960px;  
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	#inspirate img {
+	  width: 229px;
+	  height: 300px;
+	}
+}
+
+#inspirate .contenedor div {
+  font-size: 1.375em;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+#inspirate a {
+  color: white;
+}
+
+p.explica {
+  color: #111111;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p.ciudades {
+  position: relative;
+  bottom: 290px;
+  left: 20px;
+  margin: 0px;
+}
+
+p.playas {
+  position: relative;
+  bottom: 290px;
+  left: 18px;
+  margin: 0px;
+}
+
+p.familia {
+  position: relative;
+  bottom: 290px;
+  left: 24px;
+  margin: 0px;
+}
+
+p.aventura {
+  position: relative;
+  bottom: 290px;
+  left: 58px;
+  margin: 0px;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	#inspirate .contenedor div {
+	  font-size: 1em;
+	  position: relative;
+	}
+	
+	p.ciudades {
+	  bottom: 200px;
+	  left: 13px;
+	}
+
+	p.playas {
+	  bottom: 200px;
+	  left: 11px;
+	}
+
+	p.familia {
+	  bottom: 200px;
+	  left: 13px;
+	}
+
+	p.aventura {
+	  bottom: 200px;
+	  left: 40px;
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	#inspirate .contenedor div {
+	  font-size: 1.375em;
+	  position: relative;
+	}
+	
+	p.ciudades {
+	  bottom: 290px;
+	  left: 20px;
+	}
+
+	p.playas {
+	  bottom: 290px;
+	  left: 18px;
+	}
+
+	p.familia {
+	  bottom: 290px;
+	  left: 24px;
+	}
+
+	p.aventura {
+	  bottom: 290px;
+	  left: 58px;
+	}
+}
+
+#enlaces {
+   padding-top: 20px;
+   padding-bottom: 30px;
+   background-color: #f4f2f3;
+}
+
+#enlaces .contenedor {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	#enlaces .contenedor {
+	  grid-template-columns: auto auto auto;
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	#enlaces .contenedor {
+	  grid-template-columns: auto auto auto auto auto;
+	}
+}
+
+#enlaces .contenedor div {
+  font-size: 1.125em;
+  position: relative;
+}
+
+#enlaces img {
+  box-shadow: 2px 2px 5px #999999;
+}
+
+#enlaces a {
+  color: #000078;
+}
+
+p.horario {
+  position: relative;
+  bottom: 60px;
+  left: 20px;
+  margin: 0px;
+}
+
+p.equipaje {
+  position: relative;
+  bottom: 60px;
+  left: 56px;
+  margin: 0px;
+}
+
+p.faq {
+  position: relative;
+  bottom: 60px;
+  left: 75px;
+  margin: 0px;
+}
+
+p.check {
+  position: relative;
+  bottom: 60px;
+  left: 27px;
+  margin: 0px;
+}
+
+p.asistencia {
+  position: relative;
+  bottom: 60px;
+  left: 16px;
+  margin: 0px;
+}
+
+#destinos {
+  padding-top: 20px;
+}
+
+#destinos img {
+  width: 310px;
+  height: 198px;
+}
+
+#destinos .contenedor {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	#destinos .contenedor {
+	  grid-template-columns: auto auto;
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	#destinos .contenedor {
+	  grid-template-columns: auto auto auto;
+	}
+}
+
+#destinos .elemento {
+  font-size: 1.625em;
+  font-weight: bold;
+  position: relative;
+}
+
+#destinos a {
+  color: white;
+}
+
+span {
+  font-size: 0.8em;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: #73EDFF;
+}
+
+p.destino {
+  position: relative;
+  bottom: 90px;
+  left: 15px;
+  margin: 0px;
+}
+
+nav {
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color: #f4f2f3;
+}
+
+nav .contenedor {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+/* Tableta */
+@media only screen and (min-width: 768px) {
+	nav .contenedor {
+	  grid-template-columns: auto auto;
+	}
+}
+
+/* Escritorio */
+@media only screen and (min-width: 992px) {
+	nav .contenedor {
+	  grid-template-columns: auto auto auto auto;
+	}
+}
+
+
+nav .contenedor div {
+  width: 240px;
+}
+
+nav p {
+  position: relative;
+  left: 0px;
+  color: #000078;
+  font-size: 1.25em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+ul li a {
+  color: gray;
+}
+
+footer {
+  background-color: #000078;
+}
+
+.contenedor_pie {
+  text-align: center;  
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
